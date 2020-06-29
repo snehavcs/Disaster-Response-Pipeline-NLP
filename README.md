@@ -4,8 +4,8 @@ This project uses the Figure Eight dataset which includes pre-labelled tweets an
 
 The Project is divided in the following Sections:
 
-1. The first part of the data pipeline is the Extract, Transform, and Load process -  read the dataset, clean the data, and then store it in a SQLite database (See data/process_data.py). You can see the detailed steps in data/ETL Pipeline Preparation.ipynb
-2. Next, the data is split into training set and a test set. Then, machine learning pipeline is created that uses NLTK, as well as scikit-learn's Pipeline and GridSearchCV to output a model that uses the message column to predict classifications for 36 categories (multi-output classification). Finally, the model will be exported to a pickle file (see models/train_classifier.py).You can see the detailed steps in models/ML Pipeline Preparation.ipynb
+1. The first part of the data pipeline is the Extract, Transform, and Load process -  read the dataset, clean the data, and then store it in a SQLite database (See data/process_data.py).
+2. Next, the data is split into training set and a test set. Then, machine learning pipeline is created that uses NLTK, as well as scikit-learn's Pipeline and GridSearchCV to output a model that uses the message column to predict classifications for 36 categories (multi-output classification). Finally, the model will be exported to a pickle file (see models/train_classifier.py).
 3. Lastly, the results will be shown in a Flask web app (see app/run.py)
 
 
