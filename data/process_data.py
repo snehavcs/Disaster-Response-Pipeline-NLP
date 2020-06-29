@@ -32,6 +32,7 @@ def clean_data(df):
         categories[col] = categories[col].str[-1]
         categories[col] = categories[col].astype(np.int)
     cleaned_df = df.drop('categories',axis=1)
+    categories.loc[:,'related'] = categories['related'].replace(2,1)
     cleaned_df = pd.concat([cleaned_df,categories],axis=1)
     cleaned_df = cleaned_df.drop_duplicates()
     return cleaned_df
