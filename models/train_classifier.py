@@ -19,6 +19,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
 from sklearn.multioutput import MultiOutputClassifier
+from sklearn.model_selection import GridSearchCV
 
 def load_data(database_filepath):
     """
@@ -55,17 +56,19 @@ def build_model():
         tokens - Pipeline that tokenizes text messages & classifies them.
     """
     pipeline_model = Pipeline([
-        ('features', FeatureUnion([
-
             ('text_pipeline', Pipeline([
                 ('count_vectorizer', CountVectorizer(tokenizer=tokenize)),
                 ('tfidf_transformer', TfidfTransformer())
-            ]))
-
-        ])),
-
+            ])),
         ('classifier', MultiOutputClassifier(AdaBoostClassifier()))
     ])
+
+    params = {
+        'clf__estimator__min_samples_split': [2, 3, 4]
+    }
+
+    cv = GridSearchCV(pipeline_model, param_grid=params)
+
     return pipeline_model
 
 
