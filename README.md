@@ -20,6 +20,12 @@ The Project is divided in the following Sections:
 2. Run the following command in the app's directory to run your web app.
     `python run.py`
 
-3. Go to http://0.0.0.0:3001/
+3. Go to http://0.0.0.0:3003/
 
 ![Sample Input](sample_input.png)
+
+# Inspiration:
+To code has been inspired by 2 other Github repositories.
+
+https://github.com/canaveensetia/udacity-disaster-response-pipeline
+https://github.com/matteobonanomi/dsnd-disaster-response
