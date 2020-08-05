@@ -23,12 +23,3 @@ The Project is divided in the following Sections:
 3. Go to http://0.0.0.0:3003/
 
 ![Sample Input](sample_input.png)
-
-References:
-
-This project has been completed as a part of Udacity Data Science Nanodegree.
-
-The code has been inspired by 2 other Github repositories.
-
-https://github.com/canaveensetia/udacity-disaster-response-pipeline
-https://github.com/matteobonanomi/dsnd-disaster-response
